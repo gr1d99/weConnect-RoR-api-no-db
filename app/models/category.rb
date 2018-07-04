@@ -1,13 +1,12 @@
-require 'categories'
 require 'id_generator'
 
 class Category
-  include CategoryValidators
 
   attr_reader :id
   attr_accessor :name
 
-  def initialize
+  def initialize(name:)
     @id = generate_id
+    @name = name
   end
 end
