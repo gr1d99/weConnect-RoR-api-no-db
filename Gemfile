@@ -41,6 +41,7 @@ end
 group :test do
   gem 'guard-rspec', require: false
   gem 'shoulda'
+  gem 'simplecov'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
