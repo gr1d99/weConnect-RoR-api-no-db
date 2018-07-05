@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'rails_helper'
 
 RSpec.describe Category do
-  let!(:detail) { { name: 'Business' }}
+  let!(:detail) { { name: 'Business' } }
   let!(:category) { Category.new(detail) }
 
   context 'when name is provided' do
@@ -17,7 +17,7 @@ RSpec.describe Category do
 
   context 'when name is not provided' do
     it 'raises an exception' do
-      expect{ Category.new }.to raise_exception(ArgumentError)
+      expect { Category.new }.to raise_exception(ArgumentError)
     end
   end
 end
