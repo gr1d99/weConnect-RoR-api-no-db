@@ -10,3 +10,5 @@ class Category
     @name = name
   end
 end
+
+

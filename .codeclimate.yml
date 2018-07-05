@@ -1,0 +1,14 @@
+engines:
+  rubocop:
+    enabled: true
+
+ratings:
+  paths:
+  - Gemfile.lock
+  - "**.erb"
+  - "**.rb"
+
+exclude_paths:
+- config/
+- db/
+- vendor/
