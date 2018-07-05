@@ -7,7 +7,7 @@ class Business
     @name = name
     @category_id = category_id
     @location_id = location_id
-    @created_at = DateTime.now.strftime("%Y-%m-%d %H:%M")
-    @updated_at = DateTime.now.strftime("%Y-%m-%d %H:%M")
+    @created_at = Time.now.strftime('%Y-%m-%d %H:%M')
+    @updated_at = Time.now.strftime('%Y-%m-%d %H:%M')
   end
 end
