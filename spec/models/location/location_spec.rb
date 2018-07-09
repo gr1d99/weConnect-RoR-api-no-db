@@ -14,7 +14,7 @@ RSpec.describe Location do
     }
   end
 
-  context 'instance methods' do
+  xcontext 'instance methods' do
     let!(:actual_methods) do
       %i[id state email country street city zip_code phone_number]
     end
@@ -51,9 +51,20 @@ RSpec.describe Location do
     it 'raises an error' do
       expect { Location.new(details) }.to raise_error(ArgumentError)
     end
+  end
 
-    it 'is invalid' do
-      expect { Location.new(details) }
+  context 'when' do
+    context 'city is blank' do
+      before do
+        details[:city] = nil
+      end
+
+      let!(:location) { Location.new(details) }
+      let!(:error_message) { 'city can\'t be blank' }
+
+      it 'returns city can\'t be blank' do
+        expect(location.errors[:city]).to include(error_message)
+      end
     end
   end
 end
