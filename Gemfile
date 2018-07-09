@@ -39,6 +39,8 @@ group :development do
 end
 
 group :test do
+  gem 'factory_bot_rails'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'guard-rspec', require: false
   gem 'shoulda'
   gem 'simplecov'
