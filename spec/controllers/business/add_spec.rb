@@ -17,8 +17,8 @@ RSpec.describe BusinessController do
 
     it 'returns business object attributes' do
       expect(json['name']).not_to be_nil
-      expect(json['category_id']).not_to be_nil
-      expect(json['location_id']).not_to be_nil
+      expect(json['category']).not_to be_nil
+      expect(json['location']).not_to be_nil
       expect(json['id']).not_to be_nil
       expect(json['created_at']).not_to be_nil
     end

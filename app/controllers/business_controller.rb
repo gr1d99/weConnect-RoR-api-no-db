@@ -19,8 +19,8 @@ class BusinessController < ApplicationController
     {
       id: business.id,
       name: business.name,
-      location_id: business.location_id,
-      category_id: business.category_id,
+      location: locations.find(business.location_id),
+      category: business.category_id,
       created_at: business.created_at,
     }
   end

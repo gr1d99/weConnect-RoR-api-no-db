@@ -1,13 +1,14 @@
-@locations ||= Locations.new
-
 class LocationController < ApplicationController
   def create
     location = Location.create(location_params)
     if location.has_errors
       render json: { errors: location.errors }, status: :unprocessable_entity
     else
+      @locations.add(location)
       render json: location_info(location), status: :created
     end
+
+    p @locations
   end
 
   private

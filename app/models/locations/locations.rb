@@ -8,4 +8,11 @@ class Locations
   def add(location)
     @locations.push(location)
   end
+
+  def find(id)
+    locations.each do |location|
+      return location if location.id == id
+    end
+    []
+  end
 end
